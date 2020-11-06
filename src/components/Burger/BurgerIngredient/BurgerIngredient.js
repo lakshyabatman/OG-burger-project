@@ -1,52 +1,48 @@
-import React , {Component} from 'react'
-import classes from './BurgerIngredient.module.css'
+import React, { Component } from 'react';
+import classes from './BurgerIngredient.module.css';
 import PropTypes from 'prop-types';
 class BurgerIngredient extends Component {
-  
   render() {
     let ingredient = null;
-    switch(this.props.type) {
-      case ('bread-top'):
+    switch (this.props.type) {
+      case 'bread-top':
         ingredient = (
-        <div className={classes.BreadTop}>
-          <div className={classes.Seeds1}></div>
-          <div className={classes.Seeds2}></div>
-        </div>
-        
-        )
+          <div className={classes.BreadTop}>
+            <div className={classes.Seeds1}></div>
+            <div className={classes.Seeds2}></div>
+          </div>
+        );
         break;
-      case('bread-bottom'):
-        ingredient = <div className={classes.BreadBottom}></div>
+      case 'bread-bottom':
+        ingredient = <div className={classes.BreadBottom}></div>;
         break;
-      case('seeds-1'):
-        ingredient = <div className={classes.Seeds1}></div>
+      case 'seeds-1':
+        ingredient = <div className={classes.Seeds1}></div>;
         break;
-      case('seeds-2'):
-        ingredient = <div className={classes.Seeds2}></div>
+      case 'seeds-2':
+        ingredient = <div className={classes.Seeds2}></div>;
         break;
-      case('meat'):
-        ingredient = <div className={classes.Meat}></div>
+      case 'meat':
+        ingredient = <div className={classes.Meat}></div>;
         break;
-      case('cheese'):
-        ingredient = <div className={classes.Cheese}></div>
+      case 'cheese':
+        ingredient = <div className={classes.Cheese}></div>;
         break;
-      case('salad'):
-        ingredient = <div className={classes.Salad}></div>
+      case 'salad':
+        ingredient = <div className={classes.Salad}></div>;
         break;
-      case('bacon'):
-        ingredient = <div className={classes.Bacon}></div>
+      case 'bacon':
+        ingredient = <div className={classes.Bacon}></div>;
         break;
       default:
         ingredient = null;
-    
     }
-    return ingredient
+    return ingredient;
   }
-
 }
 
-BurgerIngredient.propTypes ={
-  type: PropTypes.string.isRequired
-}
+BurgerIngredient.propTypes = {
+  type: PropTypes.string.isRequired,
+};
 
-export default BurgerIngredient
+export default BurgerIngredient;
